@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Line -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <solid android:color="#F3F4F6"/> <!-- ব্যাকগ্রাউন্ড রঙ -->
+            <size android:height="@dimen/_1sdp"/> <!-- লাইন সরু করার জন্য -->
+            <corners android:radius="@dimen/_10sdp"/> <!-- গোলাকার ব্যাকগ্রাউন্ড -->
+        </shape>
+    </item>
+
+    <!-- Progress Line -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <solid android:color="@color/red"/> <!-- Progress Bar রঙ -->
+                <size android:height="@dimen/_3sdp"/> <!-- Progress লাইন সরু করার জন্য -->
+                <corners android:radius="@dimen/_10sdp"/> <!-- গোলাকার Progress Bar -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>

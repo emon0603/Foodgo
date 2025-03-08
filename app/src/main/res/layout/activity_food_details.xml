@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#A9FFFFFF"
+        >
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_arrow_back_24"
+            android:layout_margin="@dimen/_10sdp"/>
+
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        >
+
+
+
+
+
+
+
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:src="@drawable/cheeseburger"
+        android:layout_margin="@dimen/_10sdp"
+        />
+
+    <!-- Food Name -->
+    <TextView
+        android:id="@+id/food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/food_image"
+        android:layout_marginTop="8dp"
+        android:text="Food Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="@dimen/_10sdp"
+        />
+
+
+
+    <!-- Rating & Favorite Icon -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/restaurant_name"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="@dimen/_10sdp"
+        >
+
+        <!-- Star Icon -->
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/baseline_star_24"
+            android:tint="@android:color/holo_orange_light" />
+
+        <!-- Rating Text -->
+        <TextView
+            android:id="@+id/food_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="4.8"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="-"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="14 mins"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+    <!-- food details -->
+    <TextView
+        android:id="@+id/restaurant_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/food_name"
+        android:text="The Cheeseburger Wendy's Burger is a classic fast food burger that packs a punch of flavor in every bite. Made with a juicy beef patty cooked to perfection, it's topped with melted American cheese, crispy lettuce, ripe tomato, and crunchy pickles."
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginLeft="@dimen/_10sdp"
+        />
+
+    <!-- Down Button -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spicy"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+
+
+    <!-- SeekBar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/spicySeekBar"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:progress="1"
+            android:max="12"
+            android:thumb="@drawable/custom_thumb"
+            android:minHeight="@dimen/_10sdp"
+            android:maxHeight="@dimen/_10sdp"
+            android:padding="10dp"
+            android:progressTint="@color/red"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:progressDrawable="@drawable/custom_seekbar"
+            android:layout_gravity="center"
+            />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDown"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:text="-"
+            app:cornerRadius="10dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_20sdp"
+            android:padding="@dimen/_1sdp"
+            />
+
+        <TextView
+            android:id="@+id/quantity_item_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            />
+
+        <!-- Up Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:text="+"
+            app:cornerRadius="10dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_20sdp"
+            android:padding="@dimen/_1sdp"
+            />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/spicyLevelText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Medium"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        />
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+
+
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="@dimen/_30sdp"
+            >
+
+
+            <com.google.android.material.button.MaterialButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$8.24"
+                app:cornerRadius="@dimen/_10sdp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_20sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                />
+
+
+
+            <com.google.android.material.button.MaterialButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Now"
+                app:cornerRadius="@dimen/_10sdp"
+                android:backgroundTint="#3C2F2F"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/_18sdp"
+                android:paddingTop="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+
+                android:gravity="center"
+                android:layout_gravity="center"
+
+                />
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
