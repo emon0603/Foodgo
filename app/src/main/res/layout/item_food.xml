@@ -75,6 +75,8 @@
                 android:layout_width="24dp"
                 android:layout_height="24dp"
                 android:src="@drawable/ic_cart"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="5dp"
 
                 />
         </LinearLayout>

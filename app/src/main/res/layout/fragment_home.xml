@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/firstlay"
+        android:layout_marginTop="@dimen/_20sdp"
         >
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -100,6 +100,7 @@
                 style="@style/SearchViewStyle"
                 app:queryHint="Search"
                 app:iconifiedByDefault="false"
+
 
                 />
 
@@ -205,6 +206,7 @@
         android:layout_below="@id/horizontal_scroll_view"
         android:layout_marginTop="@dimen/_10sdp"
         android:padding="16dp"/>
+
 
 
 </LinearLayout>

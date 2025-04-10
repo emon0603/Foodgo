@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import android.widget.LinearLayout;
 import com.emon.foodgo.Adapter.FoodAdapter;
 import com.emon.foodgo.ModelClass.FoodItem;
 import com.emon.foodgo.R;
+import com.facebook.shimmer.ShimmerFrameLayout;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.button.MaterialButton;
 
@@ -27,6 +29,7 @@ public class Home extends Fragment {
     private RecyclerView recyclerView;
     private FoodAdapter adapter;
     private List<FoodItem> foodList;
+    private ShimmerFrameLayout shimmerFrameLayout;
 
     private MaterialButton selectedButton = null; // ট্র্যাক করার জন্য যে কোন Button সিলেক্টেড আছে
 
@@ -65,6 +68,8 @@ public class Home extends Fragment {
         recyclerView = viewhome.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
+
+
         foodList = new ArrayList<>();
         foodList.add(new FoodItem("Cheeseburger", "Wendy's", 4.9, R.drawable.cheeseburger));
         foodList.add(new FoodItem("cvdf", "Wendy's", 4.9, R.drawable.cheeseburger));
@@ -89,8 +94,6 @@ public class Home extends Fragment {
 
         adapter = new FoodAdapter(getActivity(), foodList);
         recyclerView.setAdapter(adapter);
-
-
 
 
         return viewhome;

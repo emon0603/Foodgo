@@ -63,6 +63,9 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
                 if (food.isFavorite()) {
                     holder.favoriteIcon.setImageResource(R.drawable.ic_heart);
                     holder.favoriteIcon.setColorFilter(Color.RED);
+
+
+
                 } else {
                     holder.favoriteIcon.setImageResource(R.drawable.ic_cart);
                     holder.favoriteIcon.setColorFilter(Color.GRAY);

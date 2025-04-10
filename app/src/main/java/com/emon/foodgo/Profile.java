@@ -85,24 +85,32 @@ public class Profile extends AppCompatActivity {
     private void disableEditTexts() {
         edName.setFocusable(false);
         edName.setFocusableInTouchMode(false);
+        edName.setEnabled(false);
         edEmail.setFocusable(false);
         edEmail.setFocusableInTouchMode(false);
+        edEmail.setEnabled(false);
         edAddress.setFocusable(false);
         edAddress.setFocusableInTouchMode(false);
+        edAddress.setEnabled(false);
         edPin.setFocusable(false);
         edPin.setFocusableInTouchMode(false);
+        edPin.setEnabled(false);
     }
 
     // Function to enable EditText fields
     private void enableEditTexts() {
         edName.setFocusable(true);
+        edName.setEnabled(true);
         edName.setFocusableInTouchMode(true);
         edEmail.setFocusable(true);
+        edEmail.setEnabled(true);
         edEmail.setFocusableInTouchMode(true);
         edAddress.setFocusable(true);
+        edAddress.setEnabled(true);
         edAddress.setFocusableInTouchMode(true);
         edPin.setFocusable(true);
         edPin.setFocusableInTouchMode(true);
+        edPin.setEnabled(true);
     }
 
     public void Edit_Btn(View view) {
@@ -123,4 +131,7 @@ public class Profile extends AppCompatActivity {
 
 
     }
+
+
+
 }

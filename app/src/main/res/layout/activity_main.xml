@@ -38,7 +38,7 @@
             style="@style/NoRippleBottomNav"
             android:background="@drawable/bg_navigation"
             app:itemIconTint="@android:color/white"
-            app:itemBackground="@drawable/bg_bottom_nav_item"
+            app:itemBackground="@drawable/bg_bottom_nav_dot"
             />
 
 
